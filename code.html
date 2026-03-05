@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff00ff",
+                        "secondary": "#00ffff",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#120512",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <div class="relative flex min-h-screen flex-col">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+                <h2 class="text-xl font-bold tracking-tighter text-slate-100">KILLSCREEN</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#vision">Vision</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#equity">Equity</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#access">Access</a>
+            </nav>
+            <button
+                class="bg-primary hover:bg-primary/80 text-white px-6 py-2 text-xs font-bold uppercase tracking-widest rounded transition-all">
+                JOIN CO-OP
+            </button>
+        </header>
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6">
+                <div class="absolute inset-0 z-0">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/60 to-background-dark z-10">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 z-10"></div>
+                    <img class="w-full h-full object-cover" data-alt="Cyberpunk Neo-Tokyo street with neon lights"
+                        src="bg.png" />
+                </div>
+                <div class="relative z-20 max-w-5xl text-center space-y-8">
+                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-primary leading-none">
+                        THE END OF THE GAME.<br />THE START OF THE NIGHT.
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 font-light">
+                        KILLSCREEN: A Neo-Tokyo sanctuary where molecular mixology meets elite gaming.
+                    </p>
+                    <div class="pt-8">
+                        <button
+                            class="bg-secondary text-background-dark px-10 py-5 text-sm font-black uppercase tracking-[0.2em] rounded-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,255,255,0.4)]">
+                            GET ACCESS: JOIN THE CO-OP
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Vision Section -->
+            <section class="bg-black py-24 px-6 lg:px-20 overflow-hidden" id="vision">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+                    <div class="hidden md:block">
+                        <h2
+                            class="text-6xl font-black text-primary/20 rotate-180 [writing-mode:vertical-lr] tracking-tighter">
+                            VISION [001]</h2>
+                    </div>
+                    <div class="flex-1 space-y-12">
+                        <div class="space-y-6">
+                            <h3 class="text-3xl font-bold text-primary flex items-center gap-4">
+                                <span class="h-px w-12 bg-primary"></span>
+                                ARCHITECTURAL PROTOCOL
+                            </h3>
+                            <p class="text-xl text-slate-400 leading-relaxed max-w-3xl">
+                                A tactical-industrial environment engineered for high-stakes immersion. Where cold steel
+                                meets warm neon, creating a sensory theater for those who demand elite performance from
+                                their environment and their drinks.
+                            </p>
+                            <p class="text-xl text-slate-400 leading-relaxed max-w-3xl">
+                                Our <span class="text-primary italic">Alchemist's Console</span> cocktails aren't just
+                                beverages; they are performance enhancers, molecularly tuned for the modern digital
+                                athlete.
+                            </p>
+                        </div>
+                        <!-- Visual Highlight Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group">
+                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    data-alt="Dark high-tech gaming setup with magenta lighting" src="1.png" />
+                            </div>
+                            <div
+                                class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group translate-y-8">
+                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    data-alt="Modern molecular cocktail with smoke and neon" src="2.png" />
+                            </div>
+                            <div class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group">
+                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    data-alt="Industrial minimalist bar interior with blue and pink light"
+                                    src="3.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Community Equity Section -->
+            <section class="py-24 px-6 lg:px-20 bg-background-dark border-y border-secondary/10" id="equity">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl font-black text-secondary uppercase tracking-tighter mb-4">THE CO-OP
+                            PROTOCOL</h2>
+                        <div class="h-1 w-24 bg-secondary mx-auto"></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div
+                            class="p-8 border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-secondary text-5xl mb-6 group-hover:scale-110 transition-transform">military_tech</span>
+                            <h4 class="text-xl font-bold mb-4 text-slate-100 uppercase">Founding Member</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Permanent priority access to all KILLSCREEN nodes worldwide. Immortalized in our digital
+                                hall of fame.
+                            </p>
+                        </div>
+                        <div
+                            class="p-8 border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-secondary text-5xl mb-6 group-hover:scale-110 transition-transform">payments</span>
+                            <h4 class="text-xl font-bold mb-4 text-slate-100 uppercase">Revenue Share</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Direct participation in the ecosystem's success. Your equity is tied to the growth of
+                                the community.
+                            </p>
+                        </div>
+                        <div
+                            class="p-8 border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 transition-colors group">
+                            <span
+                                class="material-symbols-outlined text-secondary text-5xl mb-6 group-hover:scale-110 transition-transform">token</span>
+                            <h4 class="text-xl font-bold mb-4 text-slate-100 uppercase">Digital Legacy</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Unique on-chain credentials that evolve with your contribution. Own your achievements in
+                                the Neo-Tokyo sanctuary.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Capture Form Section -->
+            <section class="py-24 px-6 lg:px-20 bg-black relative" id="access">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,255,0.1)_0%,transparent_70%)]">
+                </div>
+                <div
+                    class="max-w-3xl mx-auto relative z-10 border border-primary/30 p-10 md:p-16 bg-background-dark/80 backdrop-blur-xl">
+                    <div class="mb-10 text-center">
+                        <h2 class="text-3xl font-black text-primary tracking-widest uppercase mb-2">THE SYSTEM ACCEPTS
+                            YOUR LOGIN.</h2>
+                        <p class="text-slate-400 text-sm">Awaiting authentication parameters for Co-op access.</p>
+                    </div>
+                    <form action="#" class="space-y-6">
+                        <div class="space-y-2">
+                            <label
+                                class="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-bold px-1">Identity
+                                Vector</label>
+                            <input
+                                class="w-full bg-black/50 border border-primary/40 text-primary placeholder:text-primary/20 focus:ring-1 focus:ring-primary focus:border-primary px-4 py-4 outline-none transition-all shadow-[0_0_10px_rgba(255,0,255,0.1)]"
+                                placeholder="FULL NAME" type="text" />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-bold px-1">Comms
+                                Protocol</label>
+                            <input
+                                class="w-full bg-black/50 border border-primary/40 text-primary placeholder:text-primary/20 focus:ring-1 focus:ring-primary focus:border-primary px-4 py-4 outline-none transition-all shadow-[0_0_10px_rgba(255,0,255,0.1)]"
+                                placeholder="EMAIL ADDRESS" type="email" />
+                        </div>
+                        <div class="pt-6">
+                            <button
+                                class="w-full bg-primary text-white py-5 text-sm font-black uppercase tracking-[0.4em] hover:bg-primary/80 transition-all shadow-[0_0_30px_rgba(255,0,255,0.3)] border border-primary">
+                                INITIALIZE ACCESS
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-background-dark border-t border-primary/10 py-12 px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left space-y-2">
+                    <p class="text-xs font-bold tracking-widest text-primary uppercase">Veteran Owned &amp; Operated.
+                    </p>
+                    <p class="text-slate-500 text-xs">Operational Discipline. Hospitality Focused.</p>
+                </div>
+                <div class="flex items-center gap-10">
+                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                        href="#">Discord</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                        href="#">Contact</a>
+                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+                        href="#">Protocol</a>
+                </div>
+                <div class="text-slate-600 text-[10px] tracking-widest uppercase">
+                    © 2024 KILLSCREEN.SYSTEM
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
