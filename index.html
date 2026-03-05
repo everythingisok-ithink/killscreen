@@ -1,144 +1,110 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#ff00ff",
-                        "secondary": "#00ffff",
-                        "background-light": "#f8f5f8",
-                        "background-dark": "#120512",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
-                },
-            },
-        }
-    </script>
+    <link rel="stylesheet" href="index.css" />
+    <title>KILLSCREEN</title>
+    <meta name="description" content="KILLSCREEN">
+    <meta name="keywords" content="KILLSCREEN">
+    <meta name="author" content="KILLSCREEN">
+    <meta name="robots" content="index, follow">
 </head>
 
-<body
-    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
-    <div class="relative flex min-h-screen flex-col">
+<body>
+    <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
         <!-- Navigation -->
-        <header
-            class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
-                <h2 class="text-xl font-bold tracking-tighter text-slate-100">KILLSCREEN</h2>
+        <header class="site-header">
+            <div class="brand">
+                <span class="material-symbols-outlined brand-icon">terminal</span>
+                <h2 class="brand-title">KILLSCREEN</h2>
             </div>
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
-                    href="#vision">Vision</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
-                    href="#equity">Equity</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
-                    href="#access">Access</a>
+            <nav class="main-nav">
+                <a class="nav-link" href="#vision">Vision</a>
+                <a class="nav-link" href="#equity">Equity</a>
+                <a class="nav-link" href="#access">Access</a>
             </nav>
-            <button
-                class="bg-primary hover:bg-primary/80 text-white px-6 py-2 text-xs font-bold uppercase tracking-widest rounded transition-all">
-                JOIN CO-OP
-            </button>
+            <button class="btn-join">JOIN CO-OP</button>
         </header>
-        <main class="flex-1">
+
+        <main style="flex: 1;">
             <!-- Hero Section -->
-            <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-6">
-                <div class="absolute inset-0 z-0">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/60 to-background-dark z-10">
-                    </div>
-                    <div class="absolute inset-0 bg-black/40 z-10"></div>
-                    <img class="w-full h-full object-cover" data-alt="Cyberpunk Neo-Tokyo street with neon lights"
-                        src="bg.png" />
+            <section class="hero">
+                <div class="hero-background">
+                    <div class="hero-gradient"></div>
+                    <div class="hero-overlay"></div>
+                    <img class="hero-image" data-alt="Cyberpunk Neo-Tokyo street with neon lights" src="bg.png" />
                 </div>
-                <div class="relative z-20 max-w-5xl text-center space-y-8">
-                    <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-primary leading-none">
+                <div class="hero-content">
+                    <h1 class="hero-title">
                         THE END OF THE GAME.<br />THE START OF THE NIGHT.
                     </h1>
-                    <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-300 font-light">
+                    <p class="hero-subtitle">
                         KILLSCREEN: A Neo-Tokyo sanctuary where molecular mixology meets elite gaming.
                     </p>
-                    <div class="pt-8">
-                        <button
-                            class="bg-secondary text-background-dark px-10 py-5 text-sm font-black uppercase tracking-[0.2em] rounded-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,255,255,0.4)]">
-                            GET ACCESS: JOIN THE CO-OP
-                        </button>
+                    <div style="padding-top: 2rem;">
+                        <button class="btn-access">GET ACCESS: JOIN THE CO-OP</button>
                     </div>
                 </div>
             </section>
-            <section id="mission" style="padding: 60px 20px; background: #050505; border-bottom: 1px solid #333;">
-                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <h2 style="color: #0ff; font-family: 'Saira Stencil', sans-serif; letter-spacing: 2px;">CURRENT
-                        STATUS: INITIALIZING PHYSICAL NODE</h2>
-                    <p style="color: #e0e0e0; font-size: 1.1rem; line-height: 1.6;">
+
+            <!-- Mission Section -->
+            <section id="mission" class="mission">
+                <div class="mission-content">
+                    <h2 class="mission-title">CURRENT STATUS: INITIALIZING PHYSICAL NODE</h2>
+                    <p class="mission-text">
                         <strong>KILLSCREEN</strong> is a brick-and-mortar hospitality concept 20 years in the making.
                         We are currently in the site-selection phase for our flagship <strong>Neo-Tokyo Cocktail &
                             Gaming Lounge</strong>.
                         Founded by Veterans, we are fusing molecular mixology with elite-tier gaming hardware to create
                         a sanctuary for the digital generation.
                     </p>
-                    <div
-                        style="margin-top: 20px; color: #ff00ff; font-weight: bold; text-transform: uppercase; font-size: 0.9rem;">
+                    <div class="mission-objective">
                         [ Mission Objective: Establish Third-Place Dominance ]
                     </div>
                 </div>
             </section>
+
             <!-- Vision Section -->
-            <section class="bg-black py-24 px-6 lg:px-20 overflow-hidden" id="vision">
-                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
-                    <div class="hidden md:block">
-                        <h2
-                            class="text-6xl font-black text-primary/20 rotate-180 [writing-mode:vertical-lr] tracking-tighter">
-                            VISION [001]</h2>
+            <section class="vision" id="vision">
+                <div class="max-w-7xl vision-layout">
+                    <div class="vision-heading-container">
+                        <h2 class="vision-heading">VISION [001]</h2>
                     </div>
-                    <div class="flex-1 space-y-12">
-                        <div class="space-y-6">
-                            <h3 class="text-3xl font-bold text-primary flex items-center gap-4">
-                                <span class="h-px w-12 bg-primary"></span>
-                                ARCHITECTURAL PROTOCOL
-                            </h3>
-                            <p class="text-xl text-slate-400 leading-relaxed max-w-3xl">
+                    <div class="vision-content">
+                        <div>
+                            <h3 class="vision-subhed">ARCHITECTURAL PROTOCOL</h3>
+                            <p class="vision-desc">
                                 A tactical-industrial environment engineered for high-stakes immersion. Where cold steel
                                 meets warm neon, creating a sensory theater for those who demand elite performance from
                                 their environment and their drinks.
                             </p>
-                            <p class="text-xl text-slate-400 leading-relaxed max-w-3xl">
-                                Our <span class="text-primary italic">Alchemist's Console</span> cocktails aren't just
+                            <p class="vision-desc">
+                                Our <span class="text-primary" style="font-style: italic;">Alchemist's Console</span>
+                                cocktails aren't just
                                 beverages; they are performance enhancers, molecularly tuned for the modern digital
                                 athlete.
                             </p>
                         </div>
+
                         <!-- Visual Highlight Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group">
-                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        <div class="vision-grid">
+                            <div class="vision-grid-item">
+                                <img class="vision-grid-img"
                                     data-alt="Dark high-tech gaming setup with magenta lighting" src="1.png" />
                             </div>
-                            <div
-                                class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group translate-y-8">
-                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                                    data-alt="Modern molecular cocktail with smoke and neon" src="2.png" />
+                            <div class="vision-grid-item">
+                                <img class="vision-grid-img" data-alt="Modern molecular cocktail with smoke and neon"
+                                    src="2.png" />
                             </div>
-                            <div class="aspect-square bg-slate-900 border border-primary/20 overflow-hidden group">
-                                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                            <div class="vision-grid-item">
+                                <img class="vision-grid-img"
                                     data-alt="Industrial minimalist bar interior with blue and pink light"
                                     src="3.png" />
                             </div>
@@ -146,61 +112,56 @@
                     </div>
                 </div>
             </section>
-            <!-- Community Equity Section -->
-            <section id="equity" style="padding: 80px 20px;">
-                <h2 style="text-align: center; color: #ff00ff; font-family: 'Saira Stencil';">THE FOUNDING 500 CO-OP
-                </h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
 
-                    <div
-                        style="flex: 1; min-width: 280px; max-width: 350px; background: #111; padding: 30px; border-left: 4px solid #0ff;">
-                        <h4 style="color: #0ff; margin-top: 0;">PHYSICAL FOUNDING MEMBER</h4>
-                        <p style="color: #ccc;">Priority table/PC bookings for life, a custom-engraved Killscreen
+            <!-- Community Equity Section -->
+            <section id="equity" class="equity">
+                <h2 class="equity-title">THE FOUNDING 500 CO-OP</h2>
+                <div class="equity-grid">
+
+                    <div class="equity-card equity-card-cyan">
+                        <h4 class="equity-card-title">PHYSICAL FOUNDING MEMBER</h4>
+                        <p class="equity-card-desc">Priority table/PC bookings for life, a custom-engraved Killscreen
                             keycap, and access to "Member-Only" soft opening events.</p>
                     </div>
 
-                    <div
-                        style="flex: 1; min-width: 280px; max-width: 350px; background: #111; padding: 30px; border-left: 4px solid #ff00ff;">
-                        <h4 style="color: #ff00ff; margin-top: 0;">COMMUNITY OWNERSHIP</h4>
-                        <p style="color: #ccc;">True equity participation via Reg CF. Our community shares in the
+                    <div class="equity-card equity-card-magenta">
+                        <h4 class="equity-card-title">COMMUNITY OWNERSHIP</h4>
+                        <p class="equity-card-desc">True equity participation via Reg CF. Our community shares in the
                             success of the business. Be an owner, not just a customer.</p>
                     </div>
 
-                    <div
-                        style="flex: 1; min-width: 280px; max-width: 350px; background: #111; padding: 30px; border-left: 4px solid #0ff;">
-                        <h4 style="color: #0ff; margin-top: 0;">ALCHEMIST'S PRIVILEGE</h4>
-                        <p style="color: #ccc;">Voting rights on the "Seasonal Glitch" cocktail rotation and early
+                    <div class="equity-card equity-card-cyan">
+                        <h4 class="equity-card-title">ALCHEMIST'S PRIVILEGE</h4>
+                        <p class="equity-card-desc">Voting rights on the "Seasonal Glitch" cocktail rotation and early
                             access to limited edition streetwear drops.</p>
                     </div>
 
                 </div>
             </section>
+
             <!-- Capture Form Section -->
-            <section class="py-24 px-6 lg:px-20 bg-black relative" id="access">
-                <div
-                    class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,255,0.1)_0%,transparent_70%)]">
-                </div>
-                <div
-                    class="max-w-3xl mx-auto relative z-10 border border-primary/30 p-10 md:p-16 bg-background-dark/80 backdrop-blur-xl">
-                    <div class="mb-10 text-center">
-                        <h2 class="text-3xl font-black text-primary tracking-widest uppercase mb-2">THE SYSTEM ACCEPTS
-                            YOUR LOGIN.</h2>
-                        <p class="text-slate-400 text-sm">Awaiting authentication parameters for Co-op access.</p>
+            <section class="access" id="access">
+                <div class="access-bg"></div>
+                <div class="access-container">
+                    <div class="access-header">
+                        <h2 class="access-title">THE SYSTEM ACCEPTS YOUR LOGIN.</h2>
+                        <p class="access-subtitle">Awaiting authentication parameters for Co-op access.</p>
                     </div>
-                    <form action="#" class="space-y-6">
-                        <div style="max-width: 500px; margin: 0 auto;">
-                            <label style="color: #0ff; display: block; margin-bottom: 5px;">FULL NAME <span
-                                    style="font-size: 0.7rem; color: #666;">/ IDENTITY VECTOR</span></label>
-                            <input type="text" placeholder="Enter Name"
-                                style="width: 100%; padding: 12px; background: #222; border: 1px solid #444; color: #fff; margin-bottom: 20px;">
+                    <form action="#">
+                        <div class="form-wrapper">
+                            <div class="form-group">
+                                <label class="form-label">FULL NAME <span class="form-label-sub">/ IDENTITY
+                                        VECTOR</span></label>
+                                <input type="text" placeholder="Enter Name" class="form-input">
+                            </div>
 
-                            <label style="color: #0ff; display: block; margin-bottom: 5px;">EMAIL ADDRESS <span
-                                    style="font-size: 0.7rem; color: #666;">/ COMMS PROTOCOL</span></label>
-                            <input type="email" placeholder="email@protocol.com"
-                                style="width: 100%; padding: 12px; background: #222; border: 1px solid #444; color: #fff; margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label class="form-label">EMAIL ADDRESS <span class="form-label-sub">/ COMMS
+                                        PROTOCOL</span></label>
+                                <input type="email" placeholder="email@protocol.com" class="form-input">
+                            </div>
 
-                            <button
-                                style="width: 100%; padding: 15px; background: #ff00ff; color: #fff; font-weight: bold; border: none; cursor: pointer; letter-spacing: 2px;">
+                            <button class="btn-submit">
                                 INITIALIZE FOUNDING ACCESS
                             </button>
                         </div>
@@ -208,24 +169,22 @@
                 </div>
             </section>
         </main>
+
         <!-- Footer -->
-        <footer class="bg-background-dark border-t border-primary/10 py-12 px-6 lg:px-20">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-center md:text-left space-y-2">
-                    <p class="text-xs font-bold tracking-widest text-primary uppercase">Veteran Owned &amp; Operated.
-                    </p>
-                    <p class="text-slate-500 text-xs">Operational Discipline. Hospitality Focused.</p>
+        <footer class="site-footer">
+            <div class="max-w-7xl footer-layout">
+                <div class="footer-info">
+                    <p class="footer-owner">Veteran Owned &amp; Operated.</p>
+                    <p class="footer-tagline">Operational Discipline. Hospitality Focused.</p>
                 </div>
-                <div class="flex items-center gap-10">
-                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                        href="#">Discord</a>
-                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                        href="#">Contact</a>
-                    <a class="text-slate-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
-                        href="#">Protocol</a>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">Discord</a>
+                    <a class="footer-link" href="#">Contact</a>
+                    <a class="footer-link" href="protocol.html">Protocol</a>
+                    <a class="footer-link" href="intel.html">Intel</a>
                 </div>
-                <div class="text-slate-600 text-[10px] tracking-widest uppercase">
-                    © 2024 KILLSCREEN.SYSTEM
+                <div class="footer-copyright">
+                    © 2026 KILLSCREEN.BAR
                 </div>
             </div>
         </footer>
