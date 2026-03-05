@@ -9,28 +9,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
-    <title>KILLSCREEN | Neo-Tokyo Gaming & Cocktails</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>KILLSCREEN | Neo-Tokyo Gaming &amp; Cocktails</title>
+    <meta name="description"
+        content="KILLSCREEN is a Neo-Tokyo sanctuary where molecular mixology meets elite gaming. Join the Founding 500 Co-op." />
 </head>
 
-<body style="background: #000;">
-    <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
+<body>
+    <div class="site-wrapper">
+
+        <!-- Mobile Nav Drawer -->
+        <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+            <button class="nav-drawer__close" id="navClose" aria-label="Close menu">✕</button>
+            <a class="nav-drawer__link" href="index.html#vision">Vision</a>
+            <a class="nav-drawer__link" href="menu.html">Menu</a>
+            <a class="nav-drawer__link" href="protocol.html">Protocol</a>
+            <a class="nav-drawer__link" href="intel.html">Intel</a>
+            <a class="nav-drawer__cta" href="#access">JOIN CO-OP</a>
+        </div>
 
         <header class="site-header">
-            <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
+            <div class="brand" onclick="window.location.href='index.html'">
                 <span class="material-symbols-outlined brand-icon">terminal</span>
                 <h2 class="brand-title">KILLSCREEN</h2>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary navigation">
                 <a class="nav-link" href="#vision">Vision</a>
                 <a class="nav-link" href="menu.html">Menu</a>
                 <a class="nav-link" href="protocol.html">Protocol</a>
                 <a class="nav-link" href="intel.html">Intel</a>
             </nav>
-            <button class="btn-join" onclick="window.location.href='#access'">JOIN CO-OP</button>
+            <div class="header-actions">
+                <button class="btn-join" onclick="window.location.href='#access'">JOIN CO-OP</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
 
-        <main style="flex: 1;">
+        <main>
             <section class="hero">
                 <div class="hero-background">
                     <div class="hero-gradient"></div>
@@ -44,7 +63,7 @@
                     <p class="hero-subtitle">
                         KILLSCREEN: A Neo-Tokyo sanctuary where molecular mixology meets elite gaming.
                     </p>
-                    <div style="padding-top: 2rem;">
+                    <div class="hero-cta">
                         <button class="btn-access" onclick="window.location.href='#access'">GET ACCESS: JOIN THE
                             CO-OP</button>
                     </div>
@@ -65,75 +84,56 @@
                 </div>
             </section>
 
-            <section id="vision" style="padding: 100px 20px; background: #000; border-top: 1px solid #1a1a1a;">
-                <div style="max-width: 1100px; margin: 0 auto;">
+            <section id="vision" class="vision-section">
+                <div class="vision-inner">
 
-                    <div style="margin-bottom: 60px; text-align: center;">
-                        <h2
-                            style="color: #fff; font-family: 'Saira Stencil One'; font-size: 2.5rem; margin: 0; letter-spacing: 4px;">
-                            PHASE 01: SITE SELECTION</h2>
-                        <div style="width: 60px; height: 4px; background: #ff00ff; margin: 15px auto;"></div>
-                        <p
-                            style="color: #0ff; font-family: 'Space Grotesk'; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">
-                            [ RECONNAISSANCE & REAL ESTATE ACQUISITION ]</p>
+                    <div class="section-header">
+                        <h2 class="section-title">PHASE 01: SITE SELECTION</h2>
+                        <div class="section-divider"></div>
+                        <p class="section-subtitle">[ RECONNAISSANCE &amp; REAL ESTATE ACQUISITION ]</p>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center;">
+                    <div class="vision-grid-layout">
 
-                        <div
-                            style="position: relative; border: 1px solid #333; padding: 10px; background: rgba(255,255,255,0.02);">
-                            <img src="map.jpg" alt="Tactical Map"
-                                style="width: 100%; display: block; filter: brightness(0.8) contrast(1.2);">
-
-                            <div
-                                style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.8); border: 1px solid #0ff; padding: 10px; font-family: 'Space Grotesk'; font-size: 0.7rem; color: #0ff;">
+                        <div class="vision-map-frame">
+                            <img src="map.jpg" alt="Tactical Map" class="vision-map-img">
+                            <div class="vision-map-coords">
                                 COORD: 39.1031° N, 84.5120° W<br>
                                 SIGNAL: STABLE
                             </div>
-                            <div
-                                style="padding: 15px 0 5px 0; color: #666; font-family: 'Space Grotesk'; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+                            <div class="vision-map-caption">
                                 Targeting: Cincinnati / Columbus / Indianapolis / [SEARCH_CORRIDOR_B-01]
                             </div>
                         </div>
 
-                        <div style="font-family: 'Space Grotesk';">
-                            <h3
-                                style="color: #fff; font-size: 1.2rem; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
-                                OPERATIONAL REQUIREMENTS</h3>
+                        <div class="vision-ops">
+                            <h3 class="vision-ops-header">OPERATIONAL REQUIREMENTS</h3>
 
-                            <div style="display: flex; flex-direction: column; gap: 20px;">
-                                <div style="display: flex; gap: 15px;">
-                                    <span style="color: #ff00ff; font-weight: bold;">01</span>
-                                    <p style="color: #ccc; margin: 0; font-size: 0.95rem;"><strong
-                                            style="color: #fff;">Floorplate:</strong> 4,000 - 6,000 sq. ft. industrial
-                                        or converted retail spaces.</p>
+                            <div class="vision-ops-list">
+                                <div class="vision-ops-item">
+                                    <span class="vision-ops-number">01</span>
+                                    <p class="vision-ops-text"><strong>Floorplate:</strong> 4,000 - 6,000 sq. ft.
+                                        industrial or converted retail spaces.</p>
                                 </div>
-                                <div style="display: flex; gap: 15px;">
-                                    <span style="color: #ff00ff; font-weight: bold;">02</span>
-                                    <p style="color: #ccc; margin: 0; font-size: 0.95rem;"><strong
-                                            style="color: #fff;">Infrastructure:</strong> High-bandwidth fiber-optic
-                                        availability is a mission-critical "must-have."</p>
+                                <div class="vision-ops-item">
+                                    <span class="vision-ops-number">02</span>
+                                    <p class="vision-ops-text"><strong>Infrastructure:</strong> High-bandwidth
+                                        fiber-optic availability is a mission-critical "must-have."</p>
                                 </div>
-                                <div style="display: flex; gap: 15px;">
-                                    <span style="color: #ff00ff; font-weight: bold;">03</span>
-                                    <p style="color: #ccc; margin: 0; font-size: 0.95rem;"><strong
-                                            style="color: #fff;">Zoning:</strong> Urban districts with high pedestrian
-                                        "Third-Place" density and late-night viability.</p>
+                                <div class="vision-ops-item">
+                                    <span class="vision-ops-number">03</span>
+                                    <p class="vision-ops-text"><strong>Zoning:</strong> Urban districts with high
+                                        pedestrian "Third-Place" density and late-night viability.</p>
                                 </div>
                             </div>
 
-                            <div
-                                style="margin-top: 40px; padding: 25px; background: rgba(0, 255, 255, 0.03); border-left: 3px solid #0ff;">
-                                <h4
-                                    style="color: #0ff; margin: 0 0 10px 0; font-size: 0.9rem; text-transform: uppercase;">
-                                    Real Estate Intel</h4>
-                                <p style="color: #888; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px;">
+                            <div class="vision-recon">
+                                <h4 class="vision-recon-title">Real Estate Intel</h4>
+                                <p class="vision-recon-text">
                                     We are actively entertaining developer partnerships and site leads.
                                 </p>
-                                <a href="mailto:admin@killscreen.bar"
-                                    style="color: #fff; text-decoration: none; font-weight: bold; font-size: 0.85rem; display: flex; align-items: center; gap: 5px;">
-                                    SEND RECON REPORT <span class="material-symbols-outlined"
-                                        style="font-size: 1rem;">arrow_forward</span>
+                                <a href="mailto:admin@killscreen.bar" class="vision-recon-link">
+                                    SEND RECON REPORT <span class="material-symbols-outlined">arrow_forward</span>
                                 </a>
                             </div>
                         </div>
@@ -170,40 +170,33 @@
                         <h2 class="access-title">THE SYSTEM ACCEPTS YOUR LOGIN.</h2>
                         <p class="access-subtitle">Awaiting authentication parameters for Co-op access.</p>
                     </div>
-                    <form action="#">
+                    <form action="https://formspree.io/f/xdkkvpdb" method="POST">
                         <div class="form-wrapper">
                             <div class="form-group">
                                 <label class="form-label">FULL NAME <span class="form-label-sub">/ IDENTITY
                                         VECTOR</span></label>
-                                <input type="text" placeholder="Enter Name" class="form-input">
+                                <input type="text" name="name" placeholder="Enter Name" class="form-input">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">EMAIL ADDRESS <span class="form-label-sub">/ COMMS
                                         PROTOCOL</span></label>
-                                <input type="email" placeholder="email@protocol.com" class="form-input">
+                                <input type="email" name="email" placeholder="email@protocol.com" class="form-input">
                             </div>
-                            <button class="btn-submit">INITIALIZE FOUNDING ACCESS</button>
+                            <button type="submit" class="btn-submit">INITIALIZE FOUNDING ACCESS</button>
                         </div>
                     </form>
 
-                    <div
-                        style="margin-top: 60px; padding: 30px; border: 1px dashed #333; background: rgba(0,0,0,0.5); text-align: center;">
-                        <h4
-                            style="color: #0ff; font-family: 'Space Grotesk'; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">
-                            Creator Intel Required</h4>
-                        <p style="color: #888; font-size: 0.9rem; font-family: 'Space Grotesk'; margin-bottom: 20px;">
-                            We are looking for local artists for our inaugural "Armory" profit-share residency.
-                        </p>
-                        <a href="mailto:art@killscreen.bar"
-                            style="color: #ff00ff; text-decoration: none; font-family: 'Space Grotesk'; font-weight: bold; border-bottom: 1px solid #ff00ff; padding-bottom: 2px;">SUBMIT
-                            PORTFOLIO</a>
+                    <div class="access-artist-callout">
+                        <h4>Creator Intel Required</h4>
+                        <p>We are looking for local artists for our inaugural "Armory" profit-share residency.</p>
+                        <a href="mailto:art@killscreen.bar" class="access-artist-link">SUBMIT PORTFOLIO</a>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            <div class="max-w-7xl footer-layout" style="margin: 0 auto;">
+            <div class="max-w-7xl footer-layout">
                 <div class="footer-info">
                     <p class="footer-owner">Veteran Owned &amp; Operated.</p>
                     <p class="footer-tagline">Operational Discipline. Hospitality Focused.</p>
@@ -220,6 +213,44 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const drawer = document.getElementById('navDrawer');
+        const close = document.getElementById('navClose');
+
+        function openDrawer() {
+            drawer.classList.add('is-open');
+            toggle.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        toggle.addEventListener('click', () => {
+            drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+        });
+
+        close.addEventListener('click', closeDrawer);
+
+        // Close on any drawer link click
+        drawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeDrawer);
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeDrawer();
+        });
+    </script>
 </body>
 
 </html>

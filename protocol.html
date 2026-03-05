@@ -9,109 +9,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Menu | KILLSCREEN</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Protocol | KILLSCREEN</title>
+    <meta name="description"
+        content="The KILLSCREEN Protocol — operational standards and code of conduct for players and patrons." />
 </head>
 
-<body style="background: #000;">
-    <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
+<body>
+    <div class="site-wrapper">
+
+        <!-- Mobile Nav Drawer -->
+        <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+            <button class="nav-drawer__close" id="navClose" aria-label="Close menu">✕</button>
+            <a class="nav-drawer__link" href="index.html#vision">Vision</a>
+            <a class="nav-drawer__link" href="menu.html">Menu</a>
+            <a class="nav-drawer__link nav-drawer__link--active" href="protocol.html">Protocol</a>
+            <a class="nav-drawer__link" href="intel.html">Intel</a>
+            <a class="nav-drawer__cta" href="index.html#access">JOIN CO-OP</a>
+        </div>
 
         <header class="site-header">
-            <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
+            <div class="brand" onclick="window.location.href='index.html'">
                 <span class="material-symbols-outlined brand-icon">terminal</span>
                 <h2 class="brand-title">KILLSCREEN</h2>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary navigation">
                 <a class="nav-link" href="index.html#vision">Vision</a>
                 <a class="nav-link" href="menu.html">Menu</a>
-                <a class="nav-link" href="protocol.html">Protocol</a>
+                <a class="nav-link nav-link--active" href="protocol.html">Protocol</a>
                 <a class="nav-link" href="intel.html">Intel</a>
             </nav>
-            <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+            <div class="header-actions">
+                <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
 
-        <main
-            style="padding: 100px 20px; max-width: 900px; margin: 0 auto; font-family: 'Space Grotesk'; color: #e0e0e0;">
-            <h1 style="color: #ff00ff; font-family: 'Saira Stencil One'; margin-bottom: 5px;">THE KILLSCREEN PROTOCOL
-            </h1>
-            <p style="color: #0ff; letter-spacing: 2px; margin-bottom: 40px; font-weight: bold;">[ OPERATIONAL STANDARDS
-                &
-                CODE OF CONDUCT ]</p>
-
-            <section style="margin-bottom: 50px;">
-                <p
-                    style="font-size: 1.1rem; line-height: 1.6; border-left: 2px solid #333; padding-left: 20px; color: #aaa;">
-                    Killscreen is a dual-purpose environment. Whether you are here to climb the ladder or just grab a
-                    high-end cocktail, the following rules ensure the "Node" remains functional for everyone.
-                </p>
-            </section>
-
-            <div
-                style="margin-bottom: 40px; background: rgba(0, 255, 255, 0.03); padding: 30px; border: 1px solid #1a1a1a;">
-                <h2 style="color: #0ff; font-size: 1.2rem; margin-top: 0;">PLAYER STANDARDS <span
-                        style="color: #444;">//
-                        FOR THE GAMERS</span></h2>
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">01. Zero-Toxic Tolerance:</strong> Trash talk is part of the game;
-                        harassment is not. Slurs, targeted abuse, or "raging" at other patrons will result in an
-                        immediate
-                        session termination. No warnings.
-                    </li>
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">02. Hardware Stewardship:</strong> You are playing on elite-tier
-                        kits.
-                        Physical abuse of peripherals (slamming mice, hitting monitors) is a breach of conduct. You
-                        break
-                        it, you buy it.
-                    </li>
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">03. The "GG" Rule:</strong> Respect the staff and your opponents.
-                        We
-                        are a community, not a ranked solo-queue lobby. Win with humility, lose with grace.
-                    </li>
-                </ul>
+        <div class="hero hero--subpage">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-overlay"></div>
+                <img class="hero-image" src="protocol.jpg" alt="Protocol Background" />
             </div>
 
-            <div
-                style="margin-bottom: 40px; background: rgba(255, 0, 255, 0.03); padding: 30px; border: 1px solid #1a1a1a;">
-                <h2 style="color: #ff00ff; font-size: 1.2rem; margin-top: 0;">SOCIAL STANDARDS <span
-                        style="color: #444;">//
-                        FOR THE NON-GAMERS</span></h2>
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">01. Respect the Flow:</strong> Don't interfere with active matches
-                        or
-                        distract players in high-stakes zones. Treat a gaming bay like you’d treat a pool table or a
-                        dart
-                        board in a traditional bar.
-                    </li>
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">02. Ask Before Casting:</strong> Killscreen is a highly aesthetic
-                        venue. While we encourage photos, please respect the privacy of gamers who may not want to be in
-                        your social media feed.
-                    </li>
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #fff;">03. Inclusivity is Mandatory:</strong> This is not a "boys' club."
-                        Killscreen is a safe space for women, LGBTQ+ individuals, and newcomers. If you make someone
-                        feel
-                        unwelcome, you’ll be asked to leave.
-                    </li>
-                </ul>
-            </div>
+            <main class="page-main">
+                <h1 class="subpage-h1 subpage-h1--magenta">THE KILLSCREEN PROTOCOL</h1>
+                <p class="subpage-intro subpage-intro--cyan">[ OPERATIONAL STANDARDS &amp; CODE OF CONDUCT ]</p>
 
-            <div style="padding: 20px; border-top: 1px solid #333; margin-top: 20px;">
-                <h3 style="color: #fff; font-size: 1rem;">ADMINISTRATION & ENFORCEMENT</h3>
-                <p style="font-size: 0.9rem; color: #888;">
-                    Our staff are the "Admins" of this space. They have the authority to de-escalate situations, revoke
-                    gaming access, or remove patrons to protect the environment. As a Veteran-owned business, we
-                    prioritize
-                    safety and order.
-                </p>
-            </div>
-        </main>
+                <section class="protocol-intro">
+                    <p class="protocol-intro-text">
+                        Killscreen is a dual-purpose environment. Whether you are here to climb the ladder or just grab
+                        a
+                        high-end cocktail, the following rules ensure the "Node" remains functional for everyone.
+                    </p>
+                </section>
 
-        <!-- Footer -->
+                <div class="rule-panel rule-panel--cyan">
+                    <h2 class="rule-panel-title rule-panel-title--cyan">
+                        PLAYER STANDARDS <span class="rule-panel-title-sub">// FOR THE GAMERS</span>
+                    </h2>
+                    <ul class="rule-list">
+                        <li class="rule-item">
+                            <strong class="rule-title">01. Zero-Toxic Tolerance:</strong>
+                            Trash talk is part of the game; harassment is not. Slurs, targeted abuse, or "raging" at
+                            other patrons will result in an immediate session termination. No warnings.
+                        </li>
+                        <li class="rule-item">
+                            <strong class="rule-title">02. Hardware Stewardship:</strong>
+                            You are playing on elite-tier kits. Physical abuse of peripherals (slamming mice, hitting
+                            monitors) is a breach of conduct. You break it, you buy it.
+                        </li>
+                        <li class="rule-item">
+                            <strong class="rule-title">03. The "GG" Rule:</strong>
+                            Respect the staff and your opponents. We are a community, not a ranked solo-queue lobby. Win
+                            with humility, lose with grace.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="rule-panel rule-panel--magenta">
+                    <h2 class="rule-panel-title rule-panel-title--magenta">
+                        SOCIAL STANDARDS <span class="rule-panel-title-sub">// FOR THE NON-GAMERS</span>
+                    </h2>
+                    <ul class="rule-list">
+                        <li class="rule-item">
+                            <strong class="rule-title">01. Respect the Flow:</strong>
+                            Don't interfere with active matches or distract players in high-stakes zones. Treat a gaming
+                            bay like you'd treat a pool table or a bar game in a traditional venue.
+                        </li>
+                        <li class="rule-item">
+                            <strong class="rule-title">02. Ask Before Casting:</strong>
+                            Killscreen is a highly aesthetic venue. While we encourage photos, please respect the
+                            privacy of gamers who may not want to be in your social media feed.
+                        </li>
+                        <li class="rule-item">
+                            <strong class="rule-title">03. Inclusivity is Mandatory:</strong>
+                            This is not a "boys' club." Killscreen is a safe space for women, LGBTQ+ individuals, and
+                            newcomers. If you make someone feel unwelcome, you'll be asked to leave.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="protocol-admin">
+                    <h3 class="protocol-admin-title">ADMINISTRATION &amp; ENFORCEMENT</h3>
+                    <p class="protocol-admin-text">
+                        Our staff are the "Admins" of this space. They have the authority to de-escalate situations,
+                        revoke gaming access, or remove patrons to protect the environment. As a Veteran-owned business,
+                        we
+                        prioritize safety and order above all else.
+                    </p>
+                </div>
+            </main>
+        </div>
+
         <footer class="site-footer">
             <div class="max-w-7xl footer-layout">
                 <div class="footer-info">
@@ -120,7 +134,7 @@
                 </div>
                 <div class="footer-links">
                     <a class="footer-link" href="#">Discord</a>
-                    <a class="footer-link" href="#">Contact</a>
+                    <a class="footer-link" href="mailto:admin@killscreen.bar">Contact</a>
                     <a class="footer-link" href="protocol.html">Protocol</a>
                     <a class="footer-link" href="intel.html">Intel</a>
                 </div>
@@ -130,6 +144,36 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const drawer = document.getElementById('navDrawer');
+        const close = document.getElementById('navClose');
+
+        function openDrawer() {
+            drawer.classList.add('is-open');
+            toggle.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        toggle.addEventListener('click', () => {
+            drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+        });
+
+        close.addEventListener('click', closeDrawer);
+        drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    </script>
 </body>
 
 </html>

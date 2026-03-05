@@ -9,300 +9,277 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Menu | KILLSCREEN</title>
+    <meta name="description"
+        content="The KILLSCREEN menu — molecular cocktails, tactical provisions, and artist-series merch." />
 </head>
 
-<body style="background: #000;">
-    <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
+<body>
+    <div class="site-wrapper">
+
+        <!-- Mobile Nav Drawer -->
+        <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+            <button class="nav-drawer__close" id="navClose" aria-label="Close menu">✕</button>
+            <a class="nav-drawer__link" href="index.html#vision">Vision</a>
+            <a class="nav-drawer__link nav-drawer__link--active" href="menu.html">Menu</a>
+            <a class="nav-drawer__link" href="protocol.html">Protocol</a>
+            <a class="nav-drawer__link" href="intel.html">Intel</a>
+            <a class="nav-drawer__cta" href="index.html#access">JOIN CO-OP</a>
+        </div>
 
         <header class="site-header">
-            <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
+            <div class="brand" onclick="window.location.href='index.html'">
                 <span class="material-symbols-outlined brand-icon">terminal</span>
                 <h2 class="brand-title">KILLSCREEN</h2>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary navigation">
                 <a class="nav-link" href="index.html#vision">Vision</a>
-                <a class="nav-link" href="menu.html">Menu</a>
+                <a class="nav-link nav-link--active" href="menu.html">Menu</a>
                 <a class="nav-link" href="protocol.html">Protocol</a>
                 <a class="nav-link" href="intel.html">Intel</a>
             </nav>
-            <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+            <div class="header-actions">
+                <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
 
-        <main style="flex: 1; padding: 120px 20px 60px 20px; max-width: 1000px; margin: 0 auto; width: 100%;">
+        <div class="hero hero--subpage">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-overlay"></div>
+                <img class="hero-image" src="menu.jpg" alt="Menu Background" />
+            </div>
 
-            <section id="drinks" style="margin-bottom: 100px;">
-                <div style="border-left: 4px solid #0ff; padding-left: 15px; margin-bottom: 30px;">
-                    <h2 style="color: #0ff; font-family: 'Saira Stencil One'; font-size: 2rem; margin: 0;">01. THE
-                        ALCHEMIST'S CONSOLE</h2>
-                    <p
-                        style="color: #666; font-family: 'Space Grotesk'; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 2px;">
-                        Molecular Mixology // Liquid Data</p>
-                </div>
+            <main class="page-main page-main--wide">
 
-                <table style="width: 100%; border-collapse: collapse; font-family: 'Space Grotesk'; color: #e0e0e0;">
-                    <thead>
-                        <tr
-                            style="border-bottom: 1px solid #333; text-align: left; color: #0ff; font-size: 0.8rem; letter-spacing: 1px;">
-                            <th style="padding: 10px;">DESIGNATION</th>
-                            <th style="padding: 10px;">SPECIFICATIONS</th>
-                            <th style="padding: 10px; text-align: right;">CREDITS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff; width: 25%;">THE 256TH LEVEL
-                            </td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Empress Gin, Yuzu,
-                                Elderflower. pH-Reactive (Indigo to Magenta).</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$16</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">NEURAL LINK</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Smoked Japanese Whisky,
-                                Black Walnut, Charred Cedar Smoke.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$18</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">BUFFER OVERFLOW</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Spiced Rum,
-                                Pineapple-Habanero, Pop-Rock Static Foam.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$15</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">COLD REBOOT</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Nitro Cold Brew, Vodka,
-                                Vanilla Bean, Toasted Hazelnut.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$14</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">LATENCY ZERO</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Mezcal, Fresh Lime, Agave,
-                                Ghost Pepper Salt Rim.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$15</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">OVERCLOCKED</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">High-Proof Bourbon, Amaro,
-                                Spiced Vermouth, Orange Bitters.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$17</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">THE GHOST FRAME</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">White Rum, Coconut, Mint,
-                                Clarified Lime (Crystal Clear).</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$14</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">MEMORY LEAK</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Tequila, Blue Curacao,
-                                Maraschino, Absinthe Rinse.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$16</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">HARD RESET</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Fernet Branca, Cola
-                                Reduction, Lime Zest. The handshake.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$12</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">PING 999 (NA)</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Zero-Proof Gin, Seedlip
-                                Garden, Tonic, Cucumber Ribbon.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #0ff; font-weight: bold;">$11</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+                <!-- 01. Drinks -->
+                <section id="drinks" class="menu-section">
+                    <div class="menu-section-header menu-section-header--cyan">
+                        <h2 class="menu-section-title menu-section-title--cyan">01. THE ALCHEMIST'S CONSOLE</h2>
+                        <p class="menu-section-subtitle">Molecular Mixology // Liquid Data</p>
+                    </div>
 
-            <section id="food" style="margin-bottom: 100px;">
-                <div style="border-left: 4px solid #ff00ff; padding-left: 15px; margin-bottom: 30px;">
-                    <h2 style="color: #ff00ff; font-family: 'Saira Stencil One'; font-size: 2rem; margin: 0;">02. THE
-                        POWER SUPPLY</h2>
-                    <p
-                        style="color: #666; font-family: 'Space Grotesk'; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 2px;">
-                        Tactical Provisions // Zero-Grease Interface</p>
-                </div>
+                    <table class="menu-table">
+                        <thead>
+                            <tr class="menu-thead-row menu-thead-row--cyan">
+                                <th class="menu-th">DESIGNATION</th>
+                                <th class="menu-th">SPECIFICATIONS</th>
+                                <th class="menu-th menu-th--right">CREDITS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">THE 256TH LEVEL</td>
+                                <td class="menu-td-desc">Empress Gin, Yuzu, Elderflower. pH-Reactive (Indigo to
+                                    Magenta).</td>
+                                <td class="menu-td-price menu-td-price--cyan">$16</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">NEURAL LINK</td>
+                                <td class="menu-td-desc">Smoked Japanese Whisky, Black Walnut, Charred Cedar Smoke.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$18</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">BUFFER OVERFLOW</td>
+                                <td class="menu-td-desc">Spiced Rum, Pineapple-Habanero, Pop-Rock Static Foam.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$15</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">COLD REBOOT</td>
+                                <td class="menu-td-desc">Nitro Cold Brew, Vodka, Vanilla Bean, Toasted Hazelnut.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$14</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">LATENCY ZERO</td>
+                                <td class="menu-td-desc">Mezcal, Fresh Lime, Agave, Ghost Pepper Salt Rim.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$15</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">OVERCLOCKED</td>
+                                <td class="menu-td-desc">High-Proof Bourbon, Amaro, Spiced Vermouth, Orange Bitters.
+                                </td>
+                                <td class="menu-td-price menu-td-price--cyan">$17</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">THE GHOST FRAME</td>
+                                <td class="menu-td-desc">White Rum, Coconut, Mint, Clarified Lime (Crystal Clear).</td>
+                                <td class="menu-td-price menu-td-price--cyan">$14</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">MEMORY LEAK</td>
+                                <td class="menu-td-desc">Tequila, Blue Curacao, Maraschino, Absinthe Rinse.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$16</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">HARD RESET</td>
+                                <td class="menu-td-desc">Fernet Branca, Cola Reduction, Lime Zest. The handshake.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$12</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">PING 999 (NA)</td>
+                                <td class="menu-td-desc">Zero-Proof Gin, Seedlip Garden, Tonic, Cucumber Ribbon.</td>
+                                <td class="menu-td-price menu-td-price--cyan">$11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-                <table style="width: 100%; border-collapse: collapse; font-family: 'Space Grotesk'; color: #e0e0e0;">
-                    <thead>
-                        <tr
-                            style="border-bottom: 1px solid #333; text-align: left; color: #ff00ff; font-size: 0.8rem; letter-spacing: 1px;">
-                            <th style="padding: 10px;">FUEL SOURCE</th>
-                            <th style="padding: 10px;">ANALYSIS</th>
-                            <th style="padding: 10px; text-align: right;">CREDITS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff; width: 25%;">GOGI-BBQ SLIDERS
-                            </td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Bulgogi beef, kimchi-slaw.
-                                Engineered for zero-drip.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$14
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">EDAMAME 2.0</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Flash-seared, togarashi,
-                                glitch sea salt, garlic confit.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$9
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">NEO-TOKYO TACOS</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Ahi Tuna, Avocado Mousse,
-                                Crispy Wonton Shell.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$15
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">TACTICAL GYOZA</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Pan-seared pork or
-                                vegetable, black vinegar dip.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$11
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">SHISHITO ROULETTE</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Blistered peppers (1 in 10
-                                is spicy), miso glaze.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$10
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">KARAAGE NUGGETS</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Japanese fried chicken,
-                                Kewpie mayo, lemon spritz.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$12
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">THE LAN BOWL</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Chilled soba noodles,
-                                scallions, sesame, marinated tofu.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$13
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">MISO CORN RIBS</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Elote-style with miso butter
-                                and cotija dust.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$10
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">ADMIN FRIES</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Furikake seasoning, wasabi
-                                aioli. Clean finger tech.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$8
-                            </td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">DATA CRUNCH NACHOS</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Taro chips, spicy salmon,
-                                jalapeño, eel sauce.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #ff00ff; font-weight: bold;">$16
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+                <!-- 02. Food -->
+                <section id="food" class="menu-section">
+                    <div class="menu-section-header menu-section-header--magenta">
+                        <h2 class="menu-section-title menu-section-title--magenta">02. THE POWER SUPPLY</h2>
+                        <p class="menu-section-subtitle">Tactical Provisions // Zero-Grease Interface</p>
+                    </div>
 
-            <section id="merch">
-                <div style="border-left: 4px solid #fff; padding-left: 15px; margin-bottom: 30px;">
-                    <h2 style="color: #fff; font-family: 'Saira Stencil One'; font-size: 2rem; margin: 0;">03. THE
-                        ARMORY</h2>
-                    <p
-                        style="color: #666; font-family: 'Space Grotesk'; margin: 5px 0 0 0; text-transform: uppercase; letter-spacing: 2px;">
-                        Artist Residency // 60% Artist Profit Share</p>
-                </div>
+                    <table class="menu-table">
+                        <thead>
+                            <tr class="menu-thead-row menu-thead-row--magenta">
+                                <th class="menu-th">FUEL SOURCE</th>
+                                <th class="menu-th">ANALYSIS</th>
+                                <th class="menu-th menu-th--right">CREDITS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">GOGI-BBQ SLIDERS</td>
+                                <td class="menu-td-desc">Bulgogi beef, kimchi-slaw. Engineered for zero-drip.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$14</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">EDAMAME 2.0</td>
+                                <td class="menu-td-desc">Flash-seared, togarashi, glitch sea salt, garlic confit.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$9</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">NEO-TOKYO TACOS</td>
+                                <td class="menu-td-desc">Ahi Tuna, Avocado Mousse, Crispy Wonton Shell.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$15</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">TACTICAL GYOZA</td>
+                                <td class="menu-td-desc">Pan-seared pork or vegetable, black vinegar dip.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$11</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">SHISHITO ROULETTE</td>
+                                <td class="menu-td-desc">Blistered peppers (1 in 10 is spicy), miso glaze.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$10</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">KARAAGE NUGGETS</td>
+                                <td class="menu-td-desc">Japanese fried chicken, Kewpie mayo, lemon spritz.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$12</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">THE LAN BOWL</td>
+                                <td class="menu-td-desc">Chilled soba noodles, scallions, sesame, marinated tofu.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$13</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">MISO CORN RIBS</td>
+                                <td class="menu-td-desc">Elote-style with miso butter and cotija dust.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$10</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">ADMIN FRIES</td>
+                                <td class="menu-td-desc">Furikake seasoning, wasabi aioli. Clean finger tech.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$8</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">DATA CRUNCH NACHOS</td>
+                                <td class="menu-td-desc">Taro chips, spicy salmon, jalapeño, eel sauce.</td>
+                                <td class="menu-td-price menu-td-price--magenta">$16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-                <div
-                    style="background: rgba(255, 255, 255, 0.05); padding: 20px; border: 1px dashed #333; margin-bottom: 30px; font-family: 'Space Grotesk'; font-size: 0.9rem; color: #aaa;">
-                    <strong style="color: #fff;">STATUS:</strong> Current Artist Residency Open. 60% of apparel proceeds
-                    go directly to local creators. Founding 500 members hold voting rights on the next rotation.
-                </div>
+                <!-- 03. Merch -->
+                <section id="merch" class="menu-section">
+                    <div class="menu-section-header menu-section-header--white">
+                        <h2 class="menu-section-title menu-section-title--white">03. THE ARMORY</h2>
+                        <p class="menu-section-subtitle">Artist Residency // 60% Artist Profit Share</p>
+                    </div>
 
-                <table style="width: 100%; border-collapse: collapse; font-family: 'Space Grotesk'; color: #e0e0e0;">
-                    <thead>
-                        <tr
-                            style="border-bottom: 1px solid #333; text-align: left; color: #fff; font-size: 0.8rem; letter-spacing: 1px;">
-                            <th style="padding: 10px;">GEAR</th>
-                            <th style="padding: 10px;">INTEL</th>
-                            <th style="padding: 10px; text-align: right;">CREDITS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff; width: 25%;">ARTIST SERIES
-                                TEE</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Heavyweight cotton featuring
-                                [Rotating Local Artist].</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$35</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">KILLSCREEN DAD HAT</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Distressed black denim with
-                                3D logo embroidery.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$28</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">TACTICAL HOODIE</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Cyber-tech aesthetic with
-                                reinforced elbows.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$65</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">FOUNDER'S KEYCAP</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Custom resin-cast "Esc" key
-                                with Killscreen Logo.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$20</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">LIMITED CANVAS PRINT</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">High-fidelity venue mural
-                                art. Signed/Numbered.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$120</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">TOURNAMENT JERSEY</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Breathable tech-fabric.
-                                Earned via victory.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$55</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">ARTIST SERIES PATCH</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Velcro-backed tactical
-                                patch. New monthly.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$12</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">DESK MAT (XL)</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Micro-weave "Neo-Tokyo Rain"
-                                aesthetic.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$40</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">INSULATED FLASK</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Matte black laser-etched
-                                stainless steel.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$38</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #111;">
-                            <td style="padding: 15px 10px; font-weight: bold; color: #fff;">THE "BUG" BEANIE</td>
-                            <td style="padding: 15px 10px; color: #aaa; font-size: 0.9rem;">Neon-accented knit with
-                                "System Error" patch.</td>
-                            <td style="padding: 15px 10px; text-align: right; color: #fff; font-weight: bold;">$25</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
+                    <div class="armory-status">
+                        <strong>STATUS:</strong> Current Artist Residency Open. 60% of apparel
+                        proceeds go directly to local creators. Founding 500 members hold voting rights on the next
+                        rotation.
+                    </div>
+
+                    <table class="menu-table">
+                        <thead>
+                            <tr class="menu-thead-row menu-thead-row--white">
+                                <th class="menu-th">GEAR</th>
+                                <th class="menu-th">INTEL</th>
+                                <th class="menu-th menu-th--right">CREDITS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">ARTIST SERIES TEE</td>
+                                <td class="menu-td-desc">Heavyweight cotton featuring [Rotating Local Artist].</td>
+                                <td class="menu-td-price menu-td-price--white">$35</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">KILLSCREEN DAD HAT</td>
+                                <td class="menu-td-desc">Distressed black denim with 3D logo embroidery.</td>
+                                <td class="menu-td-price menu-td-price--white">$28</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">TACTICAL HOODIE</td>
+                                <td class="menu-td-desc">Cyber-tech aesthetic with reinforced elbows.</td>
+                                <td class="menu-td-price menu-td-price--white">$65</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">FOUNDER'S KEYCAP</td>
+                                <td class="menu-td-desc">Custom resin-cast "Esc" key with Killscreen Logo.</td>
+                                <td class="menu-td-price menu-td-price--white">$20</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">LIMITED CANVAS PRINT</td>
+                                <td class="menu-td-desc">High-fidelity venue mural art. Signed/Numbered.</td>
+                                <td class="menu-td-price menu-td-price--white">$120</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">TOURNAMENT JERSEY</td>
+                                <td class="menu-td-desc">Breathable tech-fabric. Earned via victory.</td>
+                                <td class="menu-td-price menu-td-price--white">$55</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">ARTIST SERIES PATCH</td>
+                                <td class="menu-td-desc">Velcro-backed tactical patch. New monthly.</td>
+                                <td class="menu-td-price menu-td-price--white">$12</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">DESK MAT (XL)</td>
+                                <td class="menu-td-desc">Micro-weave "Neo-Tokyo Rain" aesthetic.</td>
+                                <td class="menu-td-price menu-td-price--white">$40</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">INSULATED FLASK</td>
+                                <td class="menu-td-desc">Matte black laser-etched stainless steel.</td>
+                                <td class="menu-td-price menu-td-price--white">$38</td>
+                            </tr>
+                            <tr class="menu-tr">
+                                <td class="menu-td-name">THE "BUG" BEANIE</td>
+                                <td class="menu-td-desc">Neon-accented knit with "System Error" patch.</td>
+                                <td class="menu-td-price menu-td-price--white">$25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
 
         <footer class="site-footer">
-            <div class="max-w-7xl footer-layout" style="margin: 0 auto;">
+            <div class="max-w-7xl footer-layout">
                 <div class="footer-info">
                     <p class="footer-owner">Veteran Owned &amp; Operated.</p>
                     <p class="footer-tagline">Operational Discipline. Hospitality Focused.</p>
@@ -319,6 +296,36 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const drawer = document.getElementById('navDrawer');
+        const close = document.getElementById('navClose');
+
+        function openDrawer() {
+            drawer.classList.add('is-open');
+            toggle.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        toggle.addEventListener('click', () => {
+            drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+        });
+
+        close.addEventListener('click', closeDrawer);
+        drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    </script>
 </body>
 
 </html>

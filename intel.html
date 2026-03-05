@@ -9,92 +9,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Menu | KILLSCREEN</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Intel | KILLSCREEN</title>
+    <meta name="description"
+        content="Developer Intel — logging the KILLSCREEN founder journey from concept to physical node." />
 </head>
 
-<body style="background: #000;">
-    <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
+<body>
+    <div class="site-wrapper">
+
+        <!-- Mobile Nav Drawer -->
+        <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+            <button class="nav-drawer__close" id="navClose" aria-label="Close menu">✕</button>
+            <a class="nav-drawer__link" href="index.html#vision">Vision</a>
+            <a class="nav-drawer__link" href="menu.html">Menu</a>
+            <a class="nav-drawer__link" href="protocol.html">Protocol</a>
+            <a class="nav-drawer__link nav-drawer__link--active" href="intel.html">Intel</a>
+            <a class="nav-drawer__cta" href="index.html#access">JOIN CO-OP</a>
+        </div>
 
         <header class="site-header">
-            <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
+            <div class="brand" onclick="window.location.href='index.html'">
                 <span class="material-symbols-outlined brand-icon">terminal</span>
                 <h2 class="brand-title">KILLSCREEN</h2>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Primary navigation">
                 <a class="nav-link" href="index.html#vision">Vision</a>
                 <a class="nav-link" href="menu.html">Menu</a>
                 <a class="nav-link" href="protocol.html">Protocol</a>
-                <a class="nav-link" href="intel.html">Intel</a>
+                <a class="nav-link nav-link--active" href="intel.html">Intel</a>
             </nav>
-            <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+            <div class="header-actions">
+                <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </header>
 
-        <main style="padding: 100px 20px; max-width: 900px; margin: 0 auto;">
-            <h1 style="color: #0ff; font-family: 'Saira Stencil One'; margin-bottom: 5px;">DEVELOPER INTEL</h1>
-            <p style="color: #ff00ff; font-family: 'Space Grotesk'; letter-spacing: 2px; margin-bottom: 50px;">[ LOGGING
-                THE FOUNDER JOURNEY ]</p>
+        <div class="hero hero--subpage">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-overlay"></div>
+                <img class="hero-image" src="intel.jpg" alt="Intel Background" />
+            </div>
 
-            <article style="border-bottom: 1px solid #222; padding-bottom: 60px; margin-bottom: 40px;">
-                <div style="color: #666; font-family: 'Space Grotesk'; font-size: 0.8rem; margin-bottom: 15px;">LOG_ID:
-                    001 // THE_KILLSCREEN_METAPHOR</div>
-                <h2 style="color: #fff; font-family: 'Space Grotesk'; margin-top: 0; text-transform: uppercase;">20
-                    Years in the Code.</h2>
+            <main class="page-main">
+                <h1 class="subpage-h1 subpage-h1--cyan">DEVELOPER INTEL</h1>
+                <p class="subpage-intro subpage-intro--magenta">[ LOGGING THE FOUNDER JOURNEY ]</p>
 
-                <div style="color: #ccc; line-height: 1.8; font-family: 'Space Grotesk'; font-size: 1.05rem;">
-                    <p>
-                        In classic arcade architecture, a <strong>Killscreen</strong> occurs when you reach the absolute
-                        limit of the game's programming. The CPU can no longer calculate the next level. The logic
-                        breaks. The screen floods with beautiful, chaotic digital artifacts.
-                    </p>
+                <article class="intel-article">
+                    <div class="intel-article-id">LOG_ID: 001 // THE_KILLSCREEN_METAPHOR</div>
+                    <h2>20 Years in the Code.</h2>
 
-                    <p style="margin-top: 20px; border-left: 3px solid #ff00ff; padding-left: 20px;">
-                        <em>"The game doesn't end because you lost. It ends because you were too good for the system to
-                            handle."</em>
-                    </p>
+                    <div class="intel-article-body">
+                        <p>
+                            In classic arcade architecture, a <strong>Killscreen</strong> occurs when you reach the
+                            absolute limit of the game's programming. The CPU can no longer calculate the next level.
+                            The logic
+                            breaks. The screen floods with beautiful, chaotic digital artifacts.
+                        </p>
 
-                    <p style="margin-top: 20px;">
-                        My co-founder and I served together as <strong>Soldiers</strong> in the Army long before the
-                        concept of KILLSCREEN took its first breath. After our service, we began bouncing the idea back
-                        and forth—a 20-year dialogue that survived different careers, different cities, and the
-                        relentless grind of the corporate world. We aren't just "starting a business"; we are finally
-                        deploying a mission we’ve been planning since we hung up the uniform.
-                    </p>
+                        <p class="intel-article-blockquote">
+                            "The game doesn't end because you lost. It ends because you were too good for the system to
+                            handle."
+                        </p>
 
-                    <p style="margin-top: 20px;">
-                        For the last few months, I’ve been in the trenches of an executive job hunt. It’s a different
-                        kind of grind—one where the "NPCs" feel scripted and the "levels" feel repetitive. I realized I
-                        had reached my own personal Killscreen in the corporate world. The old game couldn't calculate
-                        what comes next for me.
-                    </p>
+                        <p>
+                            My co-founder and I served together as <strong>Soldiers</strong> in the Army long before the
+                            concept of KILLSCREEN took its first breath. After our service, we began bouncing the idea
+                            back and forth—a 20-year dialogue that survived different careers, different cities, and the
+                            relentless grind of the corporate world. We aren't just "starting a business"; we are
+                            finally
+                            deploying a mission we've been planning since we hung up the uniform.
+                        </p>
 
-                    <p style="margin-top: 20px; color: #0ff; font-weight: bold;">
-                        So, we are initializing a New Game+.
-                    </p>
+                        <p>
+                            For the last few months, I've been in the trenches of an executive job hunt. It's a
+                            different
+                            kind of grind—one where the "NPCs" feel scripted and the "levels" feel repetitive. I
+                            realized I
+                            had reached my own personal Killscreen in the corporate world. The old game couldn't
+                            calculate
+                            what comes next for me.
+                        </p>
 
-                    <p style="margin-top: 20px;">
-                        KILLSCREEN is the result of that crash. We aren't just building a bar; we're building the
-                        sanctuary we wanted 20 years ago. A place where the cocktails are as sophisticated as the
-                        hardware, and the community owns the "high score."
-                    </p>
-                </div>
+                        <p class="intel-article-highlight">
+                            So, we are initializing a New Game+.
+                        </p>
 
-                <div style="margin-top: 40px; display: flex; align-items: center; gap: 15px;">
-                    <div style="width: 50px; height: 2px; background: #333;"></div>
-                    <span
-                        style="color: #ff00ff; font-family: 'Space Grotesk'; font-size: 0.9rem; letter-spacing: 2px;">STATUS:
-                        SYSTEM BOOTING...</span>
-                </div>
-            </article>
+                        <p>
+                            KILLSCREEN is the result of that crash. We aren't just building a bar; we're building the
+                            sanctuary we wanted 20 years ago. A place where the cocktails are as sophisticated as the
+                            hardware, and the community owns the "high score."
+                        </p>
+                    </div>
 
-            <article style="opacity: 0.3;">
-                <div style="color: #444; font-family: 'Space Grotesk'; font-size: 0.8rem; margin-bottom: 10px;">LOG_ID:
-                    002 // SITE_SCOUTING</div>
-                <h2 style="color: #444; font-family: 'Space Grotesk'; margin-top: 0;">ANALYZING GEOGRAPHIC
-                    COORDINATES...</h2>
-            </article>
-        </main>
-        <!-- Footer -->
+                    <div class="intel-article-status">
+                        <div class="intel-article-status-line"></div>
+                        <span class="intel-article-status-text">STATUS: SYSTEM BOOTING...</span>
+                    </div>
+                </article>
+
+                <article class="intel-article-pending">
+                    <div class="intel-article-pending-id">LOG_ID: 002 // SITE_SCOUTING</div>
+                    <h2 class="intel-article-pending-title">ANALYZING GEOGRAPHIC COORDINATES...</h2>
+                </article>
+            </main>
+        </div>
+
         <footer class="site-footer">
             <div class="max-w-7xl footer-layout">
                 <div class="footer-info">
@@ -103,7 +128,7 @@
                 </div>
                 <div class="footer-links">
                     <a class="footer-link" href="#">Discord</a>
-                    <a class="footer-link" href="#">Contact</a>
+                    <a class="footer-link" href="mailto:admin@killscreen.bar">Contact</a>
                     <a class="footer-link" href="protocol.html">Protocol</a>
                     <a class="footer-link" href="intel.html">Intel</a>
                 </div>
@@ -113,6 +138,36 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const drawer = document.getElementById('navDrawer');
+        const close = document.getElementById('navClose');
+
+        function openDrawer() {
+            drawer.classList.add('is-open');
+            toggle.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            drawer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDrawer() {
+            drawer.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        toggle.addEventListener('click', () => {
+            drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+        });
+
+        close.addEventListener('click', closeDrawer);
+        drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    </script>
 </body>
 
 </html>
