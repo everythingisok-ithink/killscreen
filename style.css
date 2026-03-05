@@ -198,16 +198,21 @@ img {
     cursor: pointer;
 }
 
-.brand-icon {
-    font-size: 1.875rem;
-    color: var(--primary);
+.brand-logomark {
+    height: 2rem;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+    /* Recolor pale blue-grey fill (#c8dde0) → pink (#ff00ff) */
+    filter: brightness(0) saturate(100%) invert(13%) sepia(97%) saturate(7415%) hue-rotate(299deg) brightness(105%) contrast(115%);
 }
 
-.brand-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    color: var(--text-main);
+.brand-wordmark {
+    height: 1.375rem;
+    width: auto;
+    display: block;
+    /* Recolor pale blue-grey fill → white */
+    filter: brightness(0) invert(1);
 }
 
 /* Desktop nav */
