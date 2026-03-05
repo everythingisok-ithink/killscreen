@@ -209,21 +209,31 @@
                         <h2 class="access-title">THE SYSTEM ACCEPTS YOUR LOGIN.</h2>
                         <p class="access-subtitle">Awaiting authentication parameters for Co-op access.</p>
                     </div>
-                    <form action="https://formspree.io/f/xdkkvpdb" method="POST">
-                        <div class="form-wrapper">
-                            <div class="form-group">
-                                <label class="form-label">FULL NAME <span class="form-label-sub">/ IDENTITY
-                                        VECTOR</span></label>
-                                <input type="text" name="name" placeholder="Enter Name" class="form-input">
+                    <div class="form-coming-soon-wrap">
+                        <form action="https://formspree.io/f/xdkkvpdb" method="POST">
+                            <div class="form-wrapper">
+                                <div class="form-group">
+                                    <label class="form-label">FULL NAME <span class="form-label-sub">/ IDENTITY
+                                            VECTOR</span></label>
+                                    <input type="text" name="name" placeholder="Enter Name" class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">EMAIL ADDRESS <span class="form-label-sub">/ COMMS
+                                            PROTOCOL</span></label>
+                                    <input type="email" name="email" placeholder="email@protocol.com"
+                                        class="form-input">
+                                </div>
+                                <button type="submit" class="btn-submit">INITIALIZE FOUNDING ACCESS</button>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">EMAIL ADDRESS <span class="form-label-sub">/ COMMS
-                                        PROTOCOL</span></label>
-                                <input type="email" name="email" placeholder="email@protocol.com" class="form-input">
+                        </form>
+                        <div class="form-coming-soon-overlay" aria-hidden="true">
+                            <div class="form-coming-soon-content">
+                                <div class="form-coming-soon-tag">// STATUS: PENDING</div>
+                                <div class="form-coming-soon-label">COMING SOON</div>
+                                <div class="form-coming-soon-sub">Registration opens when we're ready to deploy.</div>
                             </div>
-                            <button type="submit" class="btn-submit">INITIALIZE FOUNDING ACCESS</button>
                         </div>
-                    </form>
+                    </div>
 
                     <div class="access-artist-callout">
                         <h4>Creator Intel Required</h4>
