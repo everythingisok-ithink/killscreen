@@ -10,22 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="index.css" />
+    <title>Menu | KILLSCREEN</title>
 </head>
 
-<body>
+<body style="background: #000;">
     <div style="position: relative; display: flex; min-height: 100vh; flex-direction: column;">
-        <!-- Navigation -->
+
         <header class="site-header">
-            <div class="brand">
+            <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
                 <span class="material-symbols-outlined brand-icon">terminal</span>
                 <h2 class="brand-title">KILLSCREEN</h2>
             </div>
             <nav class="main-nav">
-                <a class="nav-link" href="#vision">Vision</a>
-                <a class="nav-link" href="#equity">Equity</a>
-                <a class="nav-link" href="#access">Access</a>
+                <a class="nav-link" href="index.html#vision">Vision</a>
+                <a class="nav-link" href="menu.html">Menu</a>
+                <a class="nav-link" href="protocol.html">Protocol</a>
+                <a class="nav-link" href="intel.html">Intel</a>
             </nav>
-            <button class="btn-join">JOIN CO-OP</button>
+            <button class="btn-join" onclick="window.location.href='index.html#access'">JOIN CO-OP</button>
         </header>
 
         <main
